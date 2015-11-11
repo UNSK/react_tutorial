@@ -1,20 +1,8 @@
 import React from 'react'
-
-class CommentBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div class="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
-}
+import CommentBox from './components/CommentBox.jsx'
 
 React.render(
-  <CommentBox />,
+  <CommentBox url="comments.json" pollInterval={2000} />,
   document.getElementById('container')
 );
+
